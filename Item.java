@@ -2,9 +2,9 @@ public class Item extends GameComponent
         implements Collectible, Comparable<Item> {
 
   
-    private int value;
+    private final int value;
   
-    private String itemType; // KEY, TOOL, CLUE
+    private final String itemType; // KEY, TOOL, CLUE
 
     public Item(String name, int value, String itemType) {
         super(name);
@@ -33,17 +33,9 @@ public class Item extends GameComponent
                 " | Type: " + itemType +
                 " | Value: " + value);
     }
-
-    public void setItemType(String itemType) {
-        this.itemType = itemType;
-    }
-
     public int getValue() {
         return value;
     }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
 }
+
 
